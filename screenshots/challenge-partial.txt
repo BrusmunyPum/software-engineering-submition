@@ -1,0 +1,25 @@
+$ java -cp target/classes edu.itc.se.lab01.challenge.WordCount ./data --top 5 --timeout 1 --workers 2
+[0.5s] files 24/200 words 1,275,828 2,446,920 w/s   top: the(158,787) and(79,843) of(53,162)
+[1.0s] files 94/200 words 4,775,612 4,675,667 w/s   top: the(583,907) and(291,094) of(194,400)
+[1.0s] deadline reached – stopping
+[PARTIAL] files=95 words=4,814,296 elapsed=1.03s mode=platform(2)
+ rank word              count    share
+    1 the             588,582   12.23 %
+    2 and             293,276    6.09 %
+    3 of              195,809    4.07 %
+    4 to              147,341    3.06 %
+    5 a               117,748    2.45 %
+result.csv written
+
+$ java -cp target/classes edu.itc.se.lab01.challenge.WordCount ./data --top 5 --workers 2      (Ctrl+C pressed after about 1.5 s)
+[0.5s] files 32/200 words 1,659,256 3,183,861 w/s   top: the(206,495) and(104,032) of(69,555)
+[1.0s] files 63/200 words 3,204,012 3,135,714 w/s   top: the(391,774) and(195,164) of(130,737)
+[1.5s] Ctrl+C – stopping
+[PARTIAL] files=110 words=5,507,284 elapsed=1.50s mode=platform(2)
+ rank word              count    share
+    1 the             673,574   12.23 %
+    2 and             335,697    6.10 %
+    3 of              224,070    4.07 %
+    4 to              168,440    3.06 %
+    5 a               134,814    2.45 %
+result.csv written
